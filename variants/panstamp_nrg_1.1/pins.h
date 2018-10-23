@@ -79,6 +79,7 @@ static const uint8_t A11 = 128 + 11; // special. This is Vcc/2
 
 // On-board LED
 #define ONBOARD_LED 19
+#define LED_BUILTIN ONBOARD_LED
 #define LED      ONBOARD_LED
 #define INIT_ONBOARD_LED()    PJDIR |= BIT1; PJOUT &= ~BIT1
 // Acc INT pin
