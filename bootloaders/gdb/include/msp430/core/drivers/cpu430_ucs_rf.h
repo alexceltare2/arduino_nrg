@@ -66,18 +66,21 @@ struct cpu430_cs_t
     PMMCTL0_L |= PMMHPMRE_L;
     PMMCTL0_H = 0x00;
 
-    /**
-     * Enable 32kHz ACLK
+    /**  
+     * Enable 32kHz ACLK	
      */
     P5SEL |= 0x03;                      // Select XIN, XOUT on P5.0 and P5.1
-    UCSCTL6 &= ~XT1OFF;// XT1 On, Highest drive strength
-    UCSCTL6 |= XCAP_3;// Internal load cap
+    UCSCTL6 &= XT1OFF;                  // XT1 Off, bypassed
+    //UCSCTL6 &= ~XT1OFF;        	// XT1 On, Highest drive strength
+    UCSCTL6 |= XCAP_3;                  // Internal load cap
 
     /*
-     * Select XT1 as FLL reference
+     * Select REFO(internal 32khz clock) as FLL reference & VLO (internal low-power 10khz) as ACLK
      */
-    UCSCTL3 = SELA__XT1CLK;
-    UCSCTL4 = SELA__XT1CLK | SELS__DCOCLKDIV | SELM__DCOCLKDIV;
+    UCSCTL3 = SELREF__REFOCLK;
+    //UCSCTL3 = SELREF__XT1CLK;
+    UCSCTL4 = SELA__VLOCLK | SELS__DCOCLKDIV | SELM__DCOCLKDIV;
+    //UCSCTL4 = SELA__XT1CLK | SELS__DCOCLKDIV | SELM__DCOCLKDIV;   
 
     /**
      * Configure CPU clock for 12MHz
