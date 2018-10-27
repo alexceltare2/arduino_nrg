@@ -133,7 +133,7 @@ void CC430RTC::startCalendar(RTCDATA* rtcData)
 {
   calendarIsRunning = true;
   
-  RTC_SET_ACLK_XT1();                 // Connect ACLK to 32.768 KHz crystal
+  RTC_SET_ACLK_VLO();                 // Connect ACLK to VLO (Internal 10KHz oscillator)
  
   // Enable calendar mode and RTC alarm
   RTCCTL01 |= RTCMODE | RTCAIE;
