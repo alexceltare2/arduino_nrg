@@ -154,7 +154,7 @@ void CC430CORE::init(uint8_t vCore, uint16_t dcorsel, uint16_t flln)
   /*
    * Select REFO (internal 32khz) as FLL reference & VLO (internal low-power 10khz) as ACLK
    */
-  UCSCTL3 = SELA__REFOCLK;
+  UCSCTL3 = SELREF__REFOCLK;
   //UCSCTL3 = SELREF__XT1CLK;
   UCSCTL4 = SELA__VLOCLK | SELS__DCOCLKDIV | SELM__DCOCLKDIV;
   //UCSCTL4 = SELA__XT1CLK | SELS__DCOCLKDIV | SELM__DCOCLKDIV;
