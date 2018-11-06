@@ -12,8 +12,8 @@ The default behaviour of the CC430 chipset is to operate with minimal external h
 * Flash: 32KB
 * RAM: 4KB
 * Info memory/EEPROM: 512 bytes
-* Six 12-bit ADC inputs
-* 2 x USCI: USCI_A0 Supports UART, IrDA, SPI; USCI_B0 Supports I2C, SPI
+* 6 x 12-bit ADC inputs
+* 30 x GPIO supporting interrupts, I2C, SPI, IrDA
 * Unique MAC address
 * Voltage range: from 2VDC to 3.6VDC
 * Rx current: 14 mA (high gain mode disabled) / 18 mA (high gain mode enabled)
