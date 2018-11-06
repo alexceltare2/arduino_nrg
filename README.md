@@ -29,19 +29,19 @@ The default behaviour of the CC430 chipset is to operate with minimal external h
 
 # Programming
 
-We recommend Arduino IDE as your development environment and serial protocol as your programming method. The programmer of choice should be a regular 3,3V USB-to-UART(RS232) serial programmer (WCH, FTDI, Silabs or other brands) with . the pins to connectfrom Arduino IDE to the board are as they follow:
+We recommend Arduino IDE as your development environment and serial protocol as your programming method. The programmer of choice should be a regular 3.3V USB-to-UART(RS232) serial programmer (WCH, FTDI, Silabs or other brands) with DTR & RTS pins. To connect from Arduino IDE to the board you should connect the pins as they follow:
 
-...............|VCC --> VCC|..............
+...............|VCC --> VCC|..............|
 
-...............|GND --> GND|...........
+...............|GND --> GND|...........|
 
-UART...|RTS --> TEST|..CC430..
+UART...|RTS --> TEST|..CC430..|
 
-...............|DTR --> Reset|.........
+...............|DTR --> Reset|.........|
 
-...............|RX  --> TX|.................
+...............|RX  --> TX|.................|
 
-...............|TX  --> RX|.................
+...............|TX  --> RX|.................|
 
 
 # Pin mapping
@@ -51,3 +51,10 @@ TBA
 # Info memory
 
 CC430 processors do not include EEPROM space. Instead, they provide a special region in Flash to store configurations. This region is called info memory and is 512 bytes long in the CC430F5137 MCU. The panStamp library provides the necessary functions to use this info space as any other EEPROM-based region.
+
+# Serial monitor
+To save programming resources, Arduino IDE doesn't load the HardwareSerial API by default, that is, you can't use "Serial.begin()" or "Serial.print()" unless you include "#include<HardwareSerial.h>" to your code.
+With regards to Serial Monitor, some USB-to-UART adapters like FTDI come prebuilt with the right capacitor configuration and pins while others like CH340G need the DTR pin to be diconeected to trigger the Serial Monitor write(TX), and disconnect RTS to reset the MCU. A fix should be on the way.
+
+# Radio Frequency
+To change frequencies from 868Mhz to 443Mhz for example, you would traditionally call "panstamp.init();" to your code. That is not the case anymore as the new API doesn't allow this behaviour and frequencies can only be changed by editing "DEFAULT_CARRIER_FREQ" from "panstamp_nrg\hardware\msp430\1.1.0\cores\panstamp\panstamp.h". Other cool things can be changed from both the .h and .cpp file like FHSS hops and timer settings.
