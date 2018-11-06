@@ -23,7 +23,7 @@ The default behaviour of the CC430 chipset is to operate with minimal external h
 * Communication distance: Over 1Km at 4800 bps with high gain mode disabled and over 5Km wigh HGM enabled
 (Under good LoS conditions)
 * 128-bit AES Hardware Security Encryption
-* Support for [FHSS (Frequency-Hopping Spread Spectrum)](FHSS)
+* Support for FHSS (Frequency-Hopping Spread Spectrum)
 * Programmable via SBW, serial BSL and wirelessly (SWAP)
 
 
