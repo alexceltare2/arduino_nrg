@@ -14,7 +14,7 @@ The default behaviour of the CC430 chipset is to operate with minimal external h
 * Info memory/EEPROM: 512 bytes
 * 6 x 12-bit ADC inputs
 * 30 x GPIO supporting I2C, SPI, IrDA
-* Interrupts via Pins, RF & RTC.
+* Interrupts via Pins, RF & RTC
 * Unique MAC address
 * Voltage range: from 2VDC to 3.6VDC
 * Rx current: 14 mA (high gain mode disabled) / 18 mA (high gain mode enabled)
@@ -27,7 +27,7 @@ The default behaviour of the CC430 chipset is to operate with minimal external h
 * 128-bit AES Hardware Security Encryption
 * Support for FHSS (Frequency-Hopping Spread Spectrum)
 * Programmable via SBW, serial BSL and wirelessly (SWAP)
-* Hardware RTC.
+* Hardware RTC
 
 
 # Programming
