@@ -1,4 +1,4 @@
-# Universal CC430duino
+# Universal CC430 for Arduino (unicc)
 Universal MSP430 for Arduino
 
 This project aims to make panStamp a universal CC430 chip capable to be programmed using internal or external clocks, switchable carrier frequencies and many other tunnable features.
