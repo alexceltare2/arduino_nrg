@@ -28,6 +28,7 @@ The default behaviour of the CC430 chipset is to operate with minimal external h
 * Support for FHSS (Frequency-Hopping Spread Spectrum)
 * Programmable via SBW, serial BSL and wirelessly (SWAP)
 * Hardware RTC
+* Password protection for program memory
 
 
 # Programming
