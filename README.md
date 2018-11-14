@@ -14,7 +14,7 @@ The default behaviour of the CC430 chipset is to operate with minimal external h
 * Info memory/EEPROM: 512 bytes
 * 6 x 12-bit ADC inputs
 * 30 x GPIO supporting I2C, SPI, IrDA
-* Interrupts via Pins, RF & RTC
+* Interrupts via Pins, RF & Timer
 * Unique MAC address
 * Voltage range: from 2VDC to 3.6VDC
 * Rx current: 14 mA (high gain mode disabled) / 18 mA (high gain mode enabled)
@@ -52,7 +52,6 @@ TBA
 
 
 # Info memory
-
 CC430 processors do not include EEPROM space. Instead, they provide a special region in Flash to store configurations. This region is called info memory and is 512 bytes long in the CC430F5137 MCU. The panStamp library provides the necessary functions to use this info space as any other EEPROM-based region.
 
 # Serial monitor
@@ -61,3 +60,6 @@ With regards to Serial Monitor, some USB-to-UART adapters like FTDI come prebuil
 
 # Radio Frequency
 To change frequencies from 868Mhz to 443Mhz for example, you would traditionally call "panstamp.init();" to your code. That is not the case anymore as the new API doesn't allow this behaviour and frequencies can only be changed by editing "DEFAULT_CARRIER_FREQ" from "panstamp_nrg\hardware\msp430\1.1.0\cores\panstamp\panstamp.h". Other cool things can be changed from both the .h and .cpp file like FHSS hops and timer settings.
+
+# Interrupts
+To interrupt the MCU from sleeping or doing its infinite loop, the CC430 employs external interrupts. These interrupts can originate from the RF (packet received), the Timer or through its external pins (pins P1.x to P2.x / D0 to D15).
