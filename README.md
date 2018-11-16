@@ -63,4 +63,11 @@ With regards to Serial Monitor, some USB-to-UART adapters like FTDI come prebuil
 To change frequencies from 868Mhz to 443Mhz for example, you would traditionally call "panstamp.init();" to your code. That is not the case anymore as the new API doesn't allow this behaviour and frequencies can only be changed by editing "DEFAULT_CARRIER_FREQ" from "panstamp_nrg\hardware\msp430\1.1.0\cores\panstamp\panstamp.h". Other cool things can be changed from both the .h and .cpp file like FHSS hops and timer settings.
 
 # Interrupts
-To interrupt the MCU from sleeping or doing its infinite loop, the CC430 employs external interrupts. These interrupts can originate from the RF (packet received), the Timer or through its external pins (pins P1.x to P2.x / D0 to D15).
+To interrupt the MCU from sleeping or doing its infinite loop, the CC430 employs external interrupts. These interrupts can originate from the RF (packet received), the Timer or through its external pins (pins P1.x to P2.x / D0 to D15). 
+
+# Timers
+Used in a variety of implementations like signal triggers and timed events, these timers are organised as it follows:
+- Watchdog timer : Used by delay(), resets the MCU after a specified event
+- TA0 with 5 comparators: Used by writeAnalog() (PWM output). Also used by "modem" to detect time-outs between serial transmissions (Timer1A0 library)
+- TA1 with 3 comparators: Used by writeAnalog() (PWM output)
+- RTC timer : Used by cc430rtc.cpp (panstamp.sleepSec())
