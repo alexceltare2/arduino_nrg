@@ -131,7 +131,7 @@ class CC430RTC
      * @param time Sleeping time in seconds
      * @param ACLK source (RTCSRC_XT1 or RTCSRC_VLO)
      */
-    void sleep(uint16_t time, RTCSRC source=RTCSRC_XT1);
+    void sleep(uint16_t time, RTCSRC source=RTCSRC_VLO);
 
     /**
      * disableAlarm
