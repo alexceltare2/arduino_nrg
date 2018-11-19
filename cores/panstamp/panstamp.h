@@ -176,7 +176,7 @@ class PANSTAMP
      * @param time Sleep time in seconds
      * @param source Source of interruption (RTCSRC_VLO or RTCSRC_XT1)
      */
-    void sleepSec(uint16_t time, RTCSRC source=RTCSRC_XT1);
+    void sleepSec(uint16_t time, RTCSRC source=RTCSRC_VLO);
 
     /**
      * attachInterrupt
