@@ -49,7 +49,7 @@ UART...|RTS --> TEST|..CC430..|
 
 
 # Pin mapping
-TBA
+![Pin Definitions](https://github.com/alexceltare2/arduino_nrg/blob/master/resources/cc430-1.png)
 
 
 # Info memory
