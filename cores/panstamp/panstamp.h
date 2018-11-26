@@ -265,7 +265,7 @@ class PANSTAMP
     inline void startDwellingTimer(void)
     {
       TA0CCTL0 = CCIE;                          // CCR0 interrupt enabled
-      TA0CCR0 = 32.767 * FHSS_DWELLING_TIME;    // Max count
+      TA0CCR0 = /*previously 32.767 as ACLK was XT1, now VLO*/ 10.000 * FHSS_DWELLING_TIME;    // Max count
       TA0CTL = TASSEL_1 + MC_1 + TACLR;         // ACLK, upmode, clear TAR
     }
 
