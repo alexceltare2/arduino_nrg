@@ -55,7 +55,7 @@ TIMER1A0::TIMER1A0(void)
 void TIMER1A0::start(unsigned int millis)
 {
   TA1CCTL0 = CCIE;                          // CCR0 interrupt enabled
-  TA1CCR0 = 32.767 * millis;                // Max count
+  TA1CCR0 = /*previously 32.767 as ACLK was XT1, now VLO*/ 10.000 * millis;                // Max count
   TA1CTL = TASSEL_1 + MC_1 + TACLR;         // ACLK, upmode, clear TAR
 }
 
