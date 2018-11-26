@@ -40,7 +40,7 @@ class TIMER1A0
   ALWAYS_INLINE
   void start(unsigned int millis)
   {
-    TA1CCR0 = 32.767 * millis;                // Max count
+    TA1CCR0 = /*previously 32.767 as ACLK was XT1, now VLO*/ 10.000 * millis;                // Max count
     TA1CTL = TASSEL_1 + MC_1 + TACLR;         // ACLK, upmode, clear TAR
   }
   
