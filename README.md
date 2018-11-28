@@ -7,7 +7,7 @@ The default behaviour of the CC430 chipset is to operate with minimal external h
 
 # Specifications
 
-* MCU: CC430F5137 (MSP430 core + CC11XX radio SOC)
+* MCU: CC430F5137 (MSP430 core + CC1101 radio SOC)
 * Speed: Programmable speed between 8MHz and 24MHz
 * Clock: Programmable through UCS
 * Flash: 32KB
