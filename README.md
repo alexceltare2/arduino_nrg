@@ -10,6 +10,7 @@ The default behaviour of the CC430 chipset is to operate with minimal external h
 * MCU: CC430F5137 (MSP430 core + CC1101 radio SOC)
 * Speed: Programmable speed between 8MHz and 24MHz (Default is 12Mhz)
 * Clock: 5 sources programmable through UCS
+* Timers: 4 sources
 * Flash: 32KB
 * RAM: 4KB
 * Info memory/EEPROM: 512 bytes
@@ -70,6 +71,6 @@ To interrupt the MCU from sleeping or doing its infinite loop, the CC430 employs
 # Timers
 Used in a variety of implementations like signal triggers and timed events, these timers are organised as it follows:
 - Watchdog timer : Used by delay(), resets the MCU after a specified event
-- TA0 with 5 comparators: Used by writeAnalog() (PWM output). Also used by "modem" to detect time-outs between serial transmissions (Timer1A0 library)
-- TA1 with 3 comparators: Used by writeAnalog() (PWM output)
+- Timer1_A3/TA0 with 5 comparators: Used by writeAnalog() (PWM output). Also used by "modem" to detect time-outs between serial transmissions (Timer1A0 library)
+- Timer0_A5/TA1 with 3 comparators: Used by writeAnalog() (PWM output)
 - RTC timer : Used by cc430rtc.cpp (panstamp.sleepSec())
