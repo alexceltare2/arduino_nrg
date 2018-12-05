@@ -1,0 +1,31 @@
+#######################################
+# Syntax Coloring Map For Timer0A5
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+TIMER0 KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+
+start	KEYWORD2
+halt	KEYWORD2
+reset	KEYWORD2
+attachInterrupt	KEYWORD2
+overflow	KEYWORD2
+resume	KEYWORD2
+
+#######################################
+# Instances (KEYWORD2)
+#######################################
+
+timer0a5	KEYWORD2
+
+#######################################
+# Constants (LITERAL1)
+#######################################
+
