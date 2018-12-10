@@ -57,6 +57,7 @@ UART...|RTS --> TEST|..CC430..|
 
 # Info memory
 CC430 processors do not include EEPROM space. Instead, they provide a special region in Flash to store configurations. This region is called info memory and is 512 bytes long in the CC430F5137 MCU. The panStamp library provides the necessary functions to use this info space as any other EEPROM-based region. The detailed structure of the CC430 memory is listed bellow:
+
 ![Memory](https://github.com/alexceltare2/arduino_nrg/blob/master/resources/cc430-mem.png)
 
 # Serial monitor
