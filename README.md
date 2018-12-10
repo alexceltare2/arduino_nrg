@@ -76,3 +76,8 @@ Used in a variety of implementations like signal triggers and timed events, thes
 - Timer1_A3/TA0 with 5 comparators: Used by writeAnalog() (PWM output). Also used by "modem" to detect time-outs between serial transmissions (Timer1A0 library)
 - Timer0_A5/TA1 with 3 comparators: Used by writeAnalog() (PWM output)
 - RTC timer : Used by cc430rtc.cpp (panstamp.sleepSec())
+
+# ToDo
+- Update rf bootloader with VLO as clock source because rfloader.lst is in hex.
+- Add each and every library and sketch to support & demonstrate every feature listed above.
+- Make the clock source, carrier frequency & UART chip adjustable.
