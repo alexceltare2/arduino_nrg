@@ -227,6 +227,11 @@ void CC430RADIO::setCarrierFreq(uint8_t freq)
 {
   switch(freq)
   {
+     case CFREQ_918:
+      WriteSingleReg(FREQ2,  CCDEF_FREQ2_918);
+      WriteSingleReg(FREQ1,  CCDEF_FREQ1_918);
+      WriteSingleReg(FREQ0,  CCDEF_FREQ0_918);
+      break;
     case CFREQ_915:
       WriteSingleReg(FREQ2,  CCDEF_FREQ2_915);
       WriteSingleReg(FREQ1,  CCDEF_FREQ1_915);
