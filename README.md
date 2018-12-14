@@ -65,7 +65,7 @@ To save programming resources, Arduino IDE doesn't load the HardwareSerial API b
 With regards to Serial Monitor, some USB-to-UART adapters like FTDI come prebuilt with the right capacitor configuration and pins while others like CH340G need the DTR pin to be diconeected to trigger the Serial Monitor write(TX), and disconnect RTS to reset the MCU. A fix should be on the way.
 
 # Radio Frequency
-To change frequencies from 868Mhz to 443Mhz for example, you would traditionally call "panstamp.init();" to your code. That is not the case anymore as the new API doesn't allow this behaviour and frequencies can only be changed by editing "DEFAULT_CARRIER_FREQ" from "panstamp_nrg\hardware\msp430\1.1.0\cores\panstamp\panstamp.h". Other cool things can be changed from both the .h and .cpp file like FHSS hops and timer settings.
+To change frequencies from 868Mhz to 443Mhz for example, you would traditionally call "panstamp.init();" to your code. That is not the case anymore as the new API doesn't allow this behaviour and frequencies can be changed by editing "DEFAULT_CARRIER_FREQ" from "panstamp_nrg\hardware\msp430\1.1.0\cores\panstamp\panstamp.h". Other cool things can be changed from both the .h and .cpp file like FHSS hops and timer settings. Also, there is a new instruction you can call in the setup of your sketch and that is "panstamp.radio.setChannel(CFREQ_433);".
 
 # Interrupts
 To interrupt the MCU from sleeping or doing its infinite loop, the CC430 employs external interrupts. These interrupts can originate from the RF (packet received), the Timer or through its external pins (pins P1.x to P2.x / D0 to D15). 
