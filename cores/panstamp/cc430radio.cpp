@@ -242,7 +242,7 @@ void CC430RADIO::setCarrierFreq(uint8_t freq)
       WriteSingleReg(FREQ1,  CCDEF_FREQ1_433);
       WriteSingleReg(FREQ0,  CCDEF_FREQ0_433);
       break;
-    default:
+    default: //CFREQ_868
       WriteSingleReg(FREQ2,  CCDEF_FREQ2_868);
       WriteSingleReg(FREQ1,  CCDEF_FREQ1_868);
       WriteSingleReg(FREQ0,  CCDEF_FREQ0_868);
