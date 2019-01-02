@@ -73,7 +73,7 @@ To interrupt the MCU from sleeping or doing its infinite loop, the CC430 employs
 Used in a variety of implementations like signal triggers and timed events, these timers are organised as it follows:
 - Watchdog timer : Used by delay(), resets the MCU after a specified event
 - Timer1_A3/TA0 with 5 comparators: Used by writeAnalog() (PWM output). Also used by "modem" to detect time-outs between serial transmissions (Timer1A0 library)
-- Timer0_A5/TA1 with 3 comparators: Used by writeAnalog() (PWM output)
+- Timer0_A5/TA1 with 3 comparators: Used by writeAnalog() (PWM output) and Dwelling timer ISR.
 - RTC timer : Used by cc430rtc.cpp (panstamp.sleepSec())
 
 # ToDo
