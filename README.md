@@ -1,5 +1,5 @@
 # Universal CC430 for Arduino (unicc)
-Universal MSP430 for Arduino
+Universal MSP430 + CC110X for Arduino
 
 This project aims to make panStamp a universal CC430 chip capable to be programmed using internal or external clocks, switchable carrier frequencies and many other tunnable features.
 The default behaviour of the CC430 chipset is to operate with minimal external hardware requirements, meaning that only 1 XTAL clock is required for the RF modulation and the other clocks (Auxiliary Clock, Master Clock and Subsystem master Clock) will be sourced internally with minimal power consumption. For help, APIs and other useful stuff, check the Wiki page of this repo.
