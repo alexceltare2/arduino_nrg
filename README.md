@@ -16,12 +16,12 @@ The default behaviour of the CC430 chipset is to operate with minimal external h
 * Info memory/EEPROM: 512 bytes
 * 6 x 12-bit ADC inputs
 * 30 x GPIO supporting I2C, SPI, IrDA & UART through USCI
-* Interrupts via Pins, RF & Timer
+* Interrupts via Pins, RF, Clock & Timer
 * Unique MAC address
 * Voltage range: from 2VDC to 3.6VDC
 * Rx current: 14 mA (high gain mode disabled) / 18 mA (high gain mode enabled)
 * Tx current: 36 mA max (high gain mode disabled) / 300 mA (high gain mode enabled)
-* Sleep current: 2.5 uA (powered from BAT pin)
+* Power Saving Features with Sleep current: 2.5 uA (powered from BAT pin)
 * Maximum Tx power: over +20 dBm
 * RF bands: 433/868/915/918 MHz ISM bands
 * Communication distance: Over 1Km at 4800 bps with high gain mode disabled and over 5Km wigh HGM enabled
