@@ -24,7 +24,7 @@ The default behaviour of the CC430 chipset is to operate with minimal external h
 * Power Saving Features with Sleep current: 2.5 uA (powered from BAT pin)
 * Maximum Tx power: over +20 dBm
 * RF bands: 433/868/915/918 MHz ISM bands
-* Communication distance: Over 1Km at 4800 bps with high gain mode disabled and over 5Km wigh HGM enabled
+* Communication distance: Over 1Km at 4800 bps with high gain mode disabled and over 5Km with HGM enabled
 (Under good LoS conditions)
 * 128-bit AES Hardware Security Encryption
 * Support for FHSS (Frequency-Hopping Spread Spectrum)
