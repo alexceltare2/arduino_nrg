@@ -23,7 +23,7 @@ The default behaviour of the CC430 chipset is to operate with minimal external h
 * Tx current: 36 mA max (high gain mode disabled) / 300 mA (high gain mode enabled)
 * Sleep current: 2.5 uA (powered from BAT pin)
 * Maximum Tx power: over +20 dBm
-* RF bands: 433/868/905/915/918 MHz ISM bands
+* RF bands: 433/868/915/918 MHz ISM bands
 * Communication distance: Over 1Km at 4800 bps with high gain mode disabled and over 5Km wigh HGM enabled
 (Under good LoS conditions)
 * 128-bit AES Hardware Security Encryption
