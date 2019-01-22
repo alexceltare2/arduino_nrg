@@ -36,7 +36,7 @@ The default behaviour of the CC430 chipset is to operate with minimal external h
 
 # Programming
 
-We recommend Arduino IDE as your development environment and serial protocol as your programming method. The programmer of choice should be a regular 3.3V USB-to-UART(RS232) serial programmer (WCH, FTDI, Silabs or other brands) with DTR & RTS pins. To connect from Arduino IDE to the board you should connect the pins as they follow:
+We recommend Arduino IDE as your development environment and serial protocol as your programming method. The programmer of choice should be a regular 3.3V USB-to-UART(RS232) serial programmer (WCH, FTDI, Silabs or other brands) with DTR & RTS pins. Once programmed, disconnect or ground the RTS pin to start the program. To connect from Arduino IDE to the board you should connect the pins as they follow:
 
 ...............|VCC --> VCC|................|
 
@@ -62,7 +62,7 @@ CC430 processors do not include EEPROM space. Instead, they provide a special re
 
 # Serial monitor
 To save programming resources, Arduino IDE doesn't load the HardwareSerial API by default, that is, you can't use "Serial.begin()" or "Serial.print()" unless you include "#include<HardwareSerial.h>" to your code.
-With regards to Serial Monitor, some USB-to-UART adapters like FTDI come prebuilt with the right capacitor configuration and pins while others like CH340G need the DTR pin to be diconeected to trigger the Serial Monitor write(TX), and disconnect RTS to reset the MCU. A fix should be on the way.
+With regards to Serial Monitor, some USB-to-UART adapters like FTDI come prebuilt with the right capacitor configuration and pins while others like CH340G need the DTR pin to be diconeected or grounded to trigger the Serial Monitor. A fix should be on the way.
 
 # Radio Frequency
 To change frequencies from 868Mhz to 443Mhz for example, you would traditionally call "panstamp.init();" to your code. That is not the case anymore as the new API doesn't allow this behaviour and frequencies can be changed by editing "DEFAULT_CARRIER_FREQ" from "panstamp_nrg\hardware\msp430\1.1.0\cores\panstamp\panstamp.h". Other cool things can be changed from both the .h and .cpp file like FHSS hops and timer settings. Also, there is a new instruction you can call in the setup of your sketch and that is "panstamp.radio.setChannel(CFREQ_433);". Available frequencies are: 433, 868 (default), 915 & 918 Mhz.
@@ -79,4 +79,5 @@ Used in a variety of implementations like signal triggers and timed events, thes
 # ToDo
 - Update rf bootloader with VLO as clock source because rfloader.lst is in hex/assembly.
 - Add each and every library and sketch to support & demonstrate every feature listed above.
-- Make the clock source, carrier frequency & UART prog./debug adjustable.
+- Make the clock source, carrier frequency.
+- Make the UART programmer easily switchable between programming mode, running mode & Serial Monitor mode.
