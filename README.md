@@ -29,8 +29,8 @@ The default behaviour of the CC430 chipset is to operate with minimal external h
 * 128-bit AES Hardware Security Encryption
 * Support for FHSS (Frequency-Hopping Spread Spectrum)
 * Programmable via SBW, serial BSL and wirelessly (SWAP)
-* Hardware RTC
-* Internal Temperature and Voltage sensor
+* Hardware Real Time Clock & Calendar
+* Internal Temperature, Voltage & Signal Strength indicator
 * Password protection for program memory
 
 
