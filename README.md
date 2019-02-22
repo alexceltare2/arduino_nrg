@@ -10,12 +10,12 @@ The default behaviour of the CC430 chipset is to operate with minimal external h
 * MCU: CC430F5137 (MSP430 core + CC1101 radio SOC)
 * Speed: Programmable between 1MHz, 8Mhz, 12Mhz and 20MHz (Default is 12Mhz)
 * Clock: 5 sources programmable through UCS
-* Timers: 4 sources
+* Timers: 4 sources (Timer_0, Timer_1, RTC & WDT)
 * Flash: 32KB
 * RAM: 4KB
 * Info memory/EEPROM: 512 bytes
 * 6 x 12-bit ADC inputs
-* 30 x GPIO supporting I2C, SPI, IrDA & UART through USCI
+* 30 x GPIO supporting I2C, SPI, IrDA & UART comm. protocols through USCI
 * Interrupts via Pins, RF, Clock & Timer
 * Unique MAC address
 * Voltage range: from 2VDC to 3.6VDC
