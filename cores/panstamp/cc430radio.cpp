@@ -528,7 +528,7 @@ void CC430RADIO::enableCCA(bool enable)
  */
 void CC430RADIO::setWorState(uint16_t millis)
 {
-  uint32_t interval = millis * 32768;
+  uint32_t interval = millis * 10000; //was 32768, changed for VLO
   interval /= 1000;
   
   if (interval > 0xFFFF)
