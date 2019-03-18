@@ -5,7 +5,7 @@ This project aims to make panStamp a universal CC430 chip capable to be programm
 The default behaviour of the CC430 chipset is to operate with minimal external hardware requirements, meaning that only 1 XTAL clock is required for the RF modulation and the other clocks (Auxiliary Clock, Master Clock and Subsystem master Clock) will be sourced internally with minimal power consumption. For help, APIs and other useful stuff, check the Wiki page of this repo.
 
 
-# Specifications
+# Specifications & Features
 
 * MCU: CC430F5137 (MSP430 core + CC1101 radio SOC)
 * Speed: Programmable between 1MHz, 8Mhz, 12Mhz and 20MHz (Default is 12Mhz)
@@ -22,7 +22,7 @@ The default behaviour of the CC430 chipset is to operate with minimal external h
 * Rx current: 14 mA (high gain mode disabled) / 18 mA (high gain mode enabled)
 * Tx current: 36 mA max (high gain mode disabled) / 300 mA (high gain mode enabled)
 * Power Saving Features with Sleep current: 2.5 uA (powered from BAT pin)
-* Maximum Tx power: over +20 dBm
+* Maximum Tx power: over +20 dBm (adjustable).
 * RF bands: 433/868/915/918 MHz ISM bands
 * Communication distance: Over 1Km at 4800 bps with high gain mode disabled and over 5Km with HGM enabled
 (Under good LoS conditions)
