@@ -36,19 +36,19 @@ The default behaviour of the CC430 chipset is to operate with minimal external h
 
 # Programming
 
-We recommend Arduino IDE as your development environment and serial protocol as your programming method. The programmer of choice should be a regular 3.3V USB-to-UART(RS232) serial programmer (WCH, FTDI, Silabs or other brands) with DTR & RTS pins. Once programmed, if using a FTDI chip, the program should start automatically, but in case of other chips, you may need to disconnect or ground the RTS pin to start the program or use a 104(100nF) capacitor between RTS and TEST pins to automatise this. To connect from Arduino IDE to the board you should connect the pins as they follow:
+We recommend Arduino IDE as your development environment and serial protocol as your programming method. The programmer of choice should be a regular 3.3V USB-to-UART(RS232) serial programmer (WCH, FTDI, Silabs or other brands) with DTR & RTS pins. Once programmed, if using a FTDI chip, the program should start automatically, but in case of other chips, you may need to disconnect or ground the RTS pin to start the program or use a 104(100nF) capacitor between RTS and TEST pins to automatise this. To program from Arduino IDE to the board you should connect the pins as they follow:
 
-|...............|VCC --> VCC|................|
+|.................|VCC --> VCC|................|
 
-|...............|GND --> GND|..............|
+|.................|GND --> GND|..............|
 
-|UART...|RTS --> TEST|..CC430..|
+|..UART...|RTS --> TEST|..CC430..|
 
-|...............|DTR --> Reset|..............|
+|.................|DTR --> Reset|..............|
 
-|...............|RX  --> TX|......................|
+|.................|RX  --> TX|.......................|
 
-|...............|TX  --> RX|.......................|
+|.................|TX  --> RX|.......................|
 
 
 # Pin mapping
@@ -71,7 +71,7 @@ To interrupt the MCU from sleeping or doing its infinite loop, the CC430 employs
 
 # Timers
 Used in a variety of implementations like signal triggers and timed events, these timers are organised as it follows:
-- Watchdog timer : Used by delay(), resets the MCU after a specified event
+- Watchdog timer : Used by delay(), resets the MCU after a specified event.
 - Timer1_A3/TA0 with 5 comparators: Used by writeAnalog() (PWM output). Also used by "modem" to detect time-outs between serial transmissions (Timer1A0 library)
 - Timer0_A5/TA1 with 3 comparators: Used by writeAnalog() (PWM output) and FHSS Dwelling timer ISR.
 - RTC timer : Used by cc430rtc.cpp (panstamp.sleepSec())
