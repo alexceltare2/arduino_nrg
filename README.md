@@ -1,7 +1,7 @@
 # Universal CC430 for Arduino (unicc)
 Universal MSP430 + CC110X for Arduino
 
-This project aims to make panStamp a universal CC430 chip capable to be programmed using internal or external clocks, switchable carrier frequencies and many other tunnable features.
+This project aims to make panStamp a universal CC430 chip capable to be programmed using internal or external clocks, switchable carrier frequencies and many other tuneable features.
 The default behaviour of the CC430 chipset is to operate with minimal external hardware requirements, meaning that only 1 XTAL clock is required for the RF modulation and the other clocks (Auxiliary Clock, Master Clock and Subsystem master Clock) will be sourced internally with minimal power consumption. For help, APIs and other useful stuff, check the Wiki page of this repo.
 
 
@@ -36,7 +36,7 @@ The default behaviour of the CC430 chipset is to operate with minimal external h
 
 # Programming
 
-We recommend Arduino IDE as your development environment and serial protocol as your programming method. The programmer of choice should be a regular 3.3V USB-to-UART(RS232) serial programmer (WCH, FTDI, Silabs or other brands) with DTR & RTS pins. Once programmed, disconnect or ground the RTS pin to start the program. To connect from Arduino IDE to the board you should connect the pins as they follow:
+We recommend Arduino IDE as your development environment and serial protocol as your programming method. The programmer of choice should be a regular 3.3V USB-to-UART(RS232) serial programmer (WCH, FTDI, Silabs or other brands) with DTR & RTS pins. Once programmed, if using a FTDI chip, the program should start automatically, but in case of other chips, you may need to disconnect or ground the RTS pin to start the program or use a 104(100nF) capacitor between RTS and TEST pins to automatise this. To connect from Arduino IDE to the board you should connect the pins as they follow:
 
 |...............|VCC --> VCC|................|
 
@@ -56,13 +56,13 @@ We recommend Arduino IDE as your development environment and serial protocol as 
 Note: not all pins support INPUT_PULLUP definitions like D24-27.
 
 # Info memory
-CC430 processors do not include EEPROM space. Instead, they provide a special region in Flash to store configurations. This region is called info memory and is 512 bytes long in the CC430F5137 MCU. The panStamp library provides the necessary functions to use this info space as any other EEPROM-based region. The detailed structure of the CC430 memory is listed bellow:
+CC430 processors do not include EEPROM space. Instead, they provide a special region in Flash to store configurations. This region is called info memory and is 512 bytes long in the CC430F5137 MCU. The panStamp library provides the necessary functions to use this info space as any other EEPROM-based region. The detailed structure of the CC430 memory is listed below:
 
 ![Memory](https://github.com/alexceltare2/arduino_nrg/blob/master/resources/cc430-mem.png)
 
 # Serial monitor
 To save programming resources, Arduino IDE doesn't load the HardwareSerial API by default, that is, you can't use "Serial.begin()" or "Serial.print()" unless you include "#include<HardwareSerial.h>" to your code.
-With regards to Serial Monitor, some USB-to-UART adapters like FTDI come prebuilt with the right capacitor configuration and pins while others like CH340G need the DTR pin to be diconeected or grounded to trigger the Serial Monitor. A fix should be on the way.
+With regards to Serial Monitor, the DTR pin to be disconnected or grounded (with a switch) to start the Serial Monitor. A Java-BSL fix should be on the way.
 
 # Radio Frequency
 To change frequencies from 868Mhz to 443Mhz for example, you would traditionally call "panstamp.init();" to your code. That is not the case anymore as the new API doesn't allow this behaviour and frequencies can be changed by editing "DEFAULT_CARRIER_FREQ" from "panstamp_nrg\hardware\msp430\1.1.0\cores\panstamp\panstamp.h". Other cool things can be changed from both the .h and .cpp file like FHSS hops and timer settings. Also, there is a new instruction you can call in the setup of your sketch and that is "panstamp.radio.setChannel(CFREQ_433);". Available frequencies are: 433, 868 (default), 915 & 918 Mhz.
