@@ -36,7 +36,7 @@ The default behaviour of the CC430 chipset is to operate with minimal external h
 
 # Programming
 
-We recommend Arduino IDE as your development environment and serial protocol as your programming method. The programmer of choice should be a regular 3.3V USB-to-UART(RS232) serial programmer (WCH, FTDI, Silabs or other brands) with DTR & RTS pins. Once programmed, if using a FTDI chip, the program should start automatically, but in case of other chips, you may need to disconnect or ground the RTS pin to start the program or use a 104(100nF) capacitor between RTS and TEST pins to automatise this. To program from Arduino IDE to the board you should connect the pins as they follow:
+We recommend Arduino IDE as your development environment and serial protocol as your programming method. The programmer of choice should be a regular 3.3V USB-to-UART(RS232) serial programmer (WCH, FTDI, Silabs or other brands) with DTR & RTS pins. You may need to press "Upload" more than once to sucessfully upload the program onto the board. Once programmed, if using a FTDI chip, the program should start automatically, but in case of other chips, you may need to disconnect or ground the RTS pin to start the program or use a 104(100nF) capacitor between RTS and TEST pins to automatise this. To program from Arduino IDE to the board you should connect the pins as they follow:
 
 |.................|VCC --> VCC|................|
 
