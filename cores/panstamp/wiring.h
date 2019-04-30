@@ -149,7 +149,6 @@ extern const uint16_t digital_pin_to_analog_in[];
 #define digitalPinToBitMask(P) ( digital_pin_to_bit_mask[P] )
 #define digitalPinToTimer(P)   ( digital_pin_to_timer[P] )
 #define digitalPinToADCIn(P)   ( digital_pin_to_analog_in[P] )
-#define digitalPinToTimer(P)   ( digital_pin_to_timer[P] )
 #define digitalPinToPortMap(P) ( (volatile uint8_t *)(digital_pin_to_pmap[P]) )
 #define portDirRegister(P)     ( (volatile uint8_t *)( port_to_dir[P]) )
 /*
