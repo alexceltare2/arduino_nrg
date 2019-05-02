@@ -84,4 +84,4 @@ Used in a variety of implementations like signal triggers and timed events, thes
 - Make the UART programmer easily switchable between programming mode, running mode & Serial Monitor mode.
 - Allow the delay() function to work within ISR or at least leave a warning message.
 - Allow declarations like if(a == 1||2) instead of only if(a==1||a==2).
-- Allow the serial monitor to work with attachInterrupt(), or leave a warning behind.
+- Allow the serial monitor to work with attachInterrupt() and sleep modes reliably, or leave a warning behind.
