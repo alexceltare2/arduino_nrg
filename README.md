@@ -11,8 +11,7 @@ The default behaviour of the CC430 chipset is to operate with minimal external h
 * Speed: Programmable between 1MHz, 8Mhz, 12Mhz and 20MHz (Default is 12Mhz)
 * Clock: 5 sources programmable through UCS
 * Timers: 4 sources (Timer_0, Timer_1, RTC & WDT)
-* Flash: 32KB
-* RAM: 4KB
+* Flash: 32KB + RAM: 4KB
 * Info memory/EEPROM: 512 bytes
 * 6 x 12-bit ADC inputs
 * 30 x GPIO supporting I2C, SPI, IrDA & UART comm. protocols through USCI
