@@ -36,6 +36,7 @@
 /**
  * System clock
  */
+#define CLK_FREQ_1MHZ  1000000L
 #define CLK_FREQ_12MHZ  12000000L
 #define CLK_FREQ_20MHZ  20000000L
 
