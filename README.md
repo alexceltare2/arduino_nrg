@@ -84,3 +84,4 @@ Used in a variety of implementations like signal triggers and timed events, thes
 - Allow the delay() function to work within ISR or at least leave a warning message.
 - Allow declarations like if(a == 1||2) instead of only if(a==1||a==2).
 - Allow the serial monitor to work with attachInterrupt(), pinMode() and sleep modes reliably, or leave a warning behind.
+- Make P5 pins switchable between GPIO mode and XT1 mode.
