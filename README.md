@@ -39,7 +39,7 @@ We recommend Arduino IDE as your development environment and serial protocol as 
 
 |.......................|VCC --> VCC|......................|
 
-|.................|GND --> GND|....................|
+|.......................|GND --> GND|....................|
 
 |..UART.........|RTS --> TEST|........CC430..|
 
