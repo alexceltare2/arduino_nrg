@@ -147,9 +147,10 @@ void CC430CORE::init(uint8_t vCore, uint16_t dcorsel, uint16_t flln)
    * Enable 32kHz ACLK	
    */
   //P5SEL |= 0x03;                      // Select XIN, XOUT on P5.0 and P5.1
-  UCSCTL6 |= XT1OFF;        				  // XT1 Off, bypassed
-  //UCSCTL6 &= ~XT1OFF;        				  // XT1 On, Highest drive strength
-  //UCSCTL6 |= XCAP_3;                  // Internal load cap
+  P5SEL |= 0x00;			// P5 pins are GPIO
+  UCSCTL6 |= XT1OFF;        		// XT1 Off, bypassed
+  //UCSCTL6 &= ~XT1OFF;			// XT1 On, Highest drive strength
+  //UCSCTL6 |= XCAP_3;                  // Internal load cap for XT1
 
   /*
    * Select REFO (internal 32khz) as FLL reference & VLO (internal low-power 10khz) as ACLK
