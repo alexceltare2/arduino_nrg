@@ -74,7 +74,9 @@ void CC430CORE::setLowPowerMode(bool lpm4)
   P1OUT |= 0x90;
   #elif __NRG_VERSION_1_0__
   P1OUT |= 0x30;
-  #else  // __NRG_VERSION_2
+  #elif __NO_I2C__
+  P1OUT |= 0x00;
+  #else  // __NRG_VERSION_2 & 3
   P1OUT |= 0x18;
   #endif
  
