@@ -64,7 +64,7 @@ void CC430CORE::setLowPowerMode(bool lpm4)
   // should be used instead.
   P3SEL &= BIT6;
   P3DIR |= portSelection[2] & ~BIT6;
-  #else
+  #else //NRG 1.1, 2 or 3
   P3DIR |= portSelection[2];
   #endif
     
