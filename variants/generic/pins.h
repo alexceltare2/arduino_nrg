@@ -28,10 +28,13 @@
 
 #include <stdint.h>
 
-#define __NRG_VERSION_3_0__  1
+#define __NRG_VERSION_2_0__  1
 
 // Enable pseudo-pin interrupts on P3
 #define __ENABLE_P3_PIN_INTERRUPTS__  1
+
+// The board has no I2C thus don't keep those pins high
+#define __NO_I2C__ 1
 
 // UART
 #define pinUARTmap()      P1MAP6 = PM_UCA0TXD; P1MAP5 = PM_UCA0RXD
