@@ -86,3 +86,4 @@ Used in a variety of implementations like signal triggers and timed events, thes
 - Allow the serial monitor to work with attachInterrupt(), pinMode() and sleep modes reliably, or leave a warning behind.
 - Make P5 pins switchable between GPIO mode and XT1 mode.
 - Make the Arduino program the chip on the first try. [Requires java upload script change]
+- Leave a warning behind when using RX and TX pins as GPIO pins and Serial Monitor at the same time.
