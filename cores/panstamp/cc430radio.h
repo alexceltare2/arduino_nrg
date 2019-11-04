@@ -94,21 +94,21 @@ enum RFSTATE
 #define CCDEF_FREQ0_433  0x62   // Frequency Control Word, Low Byte
 #define CCDEF_MDMCFG4_4800    0xC7   // Modem configuration. Speed = 4800 bps
 #define CCDEF_MDMCFG4_38400    0xCA   // Modem configuration. Speed = 38 Kbps
-#define CCDEF_MDMCFG3    0x83   // Modem configuration.
-#define CCDEF_MDMCFG2    0x93   // Modem configuration.
-#define CCDEF_MDMCFG1    0x22   // Modem configuration.
-#define CCDEF_MDMCFG0    0xF8   // Modem configuration.
+#define CCDEF_MDMCFG3    0x83   // Modem configuration.(Data rate)
+#define CCDEF_MDMCFG2    0x93   // Modem configuration.(Modulation+Manchester)
+#define CCDEF_MDMCFG1    0x22   // Modem configuration.(Preamble)
+#define CCDEF_MDMCFG0    0xF8   // Modem configuration.(Channel spacing)
 #define CCDEF_CHANNR     0x00   // Channel number.
 #define CCDEF_DEVIATN    0x35   // Modem deviation setting (when FSK modulation is enabled).
 #define CCDEF_FREND1     0x56   // Front end RX configuration.
 #define CCDEF_FREND0     0x10   // Front end TX configuration.
-#define CCDEF_MCSM0      0x18   // Main Radio Control State Machine configuration.
-#define CCDEF_MCSM1      0x20   // Main Radio Control State Machine configuration.
+#define CCDEF_MCSM0      0x18   // Main Radio Control State Machine configuration. (Calibration)
+#define CCDEF_MCSM1      0x20   // Main Radio Control State Machine configuration. (CCA+RXfinish+TXfinish)
 #define CCDEF_FOCCFG     0x16   // Frequency Offset Compensation Configuration.
 #define CCDEF_BSCFG      0x6C   // Bit synchronization Configuration.
-#define CCDEF_AGCCTRL2   0x43   // AGC control.
-#define CCDEF_AGCCTRL1   0x40   // AGC control.
-#define CCDEF_AGCCTRL0   0x91   // AGC control.
+#define CCDEF_AGCCTRL2   0x43   // AGC control.(DVGA+LNAgain+Filter)
+#define CCDEF_AGCCTRL1   0x40   // AGC control.(Carrier Sense)
+#define CCDEF_AGCCTRL0   0x91   // AGC control.(AGC Hysterisis+Wait+Filter)
 #define CCDEF_FSCAL3     0xE9   // Frequency synthesizer calibration.
 #define CCDEF_FSCAL2     0x2A   // Frequency synthesizer calibration.
 #define CCDEF_FSCAL1     0x00   // Frequency synthesizer calibration.
@@ -119,9 +119,9 @@ enum RFSTATE
 #define CCDEF_TEST0      0x09   // Various test settings.
 #define CCDEF_FIFOTHR    0x07   // RXFIFO and TXFIFO thresholds.
 #define CCDEF_IOCFG2     0x29   // GDO2 output pin configuration.
-#define CCDEF_IOCFG0     0x06   // GDO0 output pin configuration. Refer to SmartRF® Studio User Manual for detailed pseudo register explanation.
-#define CCDEF_PKTCTRL1   0x06   // Packet automation control.
-#define CCDEF_PKTCTRL0   0x05   // Packet automation control.
+#define CCDEF_IOCFG0     0x06   // GDO0 output pin configuration. Refer to SmartRFÂ® Studio User Manual for detailed pseudo register explanation.
+#define CCDEF_PKTCTRL1   0x06   // Packet automation control.(AddrCheck+PQT)
+#define CCDEF_PKTCTRL0   0x05   // Packet automation control.(Length+PKTformat+CRC)
 #define CCDEF_ADDR       0x77   // Device address.
 #define CCDEF_PKTLEN     0x3D   // Packet length.
 
