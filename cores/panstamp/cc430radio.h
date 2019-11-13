@@ -45,6 +45,7 @@ enum CFREQ
   CFREQ_915,
   CFREQ_918,
   CFREQ_433,
+  CFREQ_315,
   CFREQ_LAST
 };
 
