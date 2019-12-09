@@ -87,3 +87,4 @@ Used in a variety of implementations like signal triggers and timed events, thes
 - Make P5 pins switchable between GPIO mode and XT1 mode.
 - Make the Arduino program the chip on the first try. [Requires java upload script change]
 - Leave a warning behind when using RX and TX pins as GPIO pins and Serial Monitor at the same time.
+- Make delay(), delayMicroseconds() and timerx.start() consistent and not offset with the real time.
