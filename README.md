@@ -77,6 +77,7 @@ Used in a variety of implementations like signal triggers and timed events, thes
 - RTC timer : Used by cc430rtc.cpp (panstamp.sleepSec())
 
 # ToDo
+- Add support for more chips and switchable through #define arguments.
 - Update rf bootloader with VLO as clock source because rfloader.lst is in hex/assembly.
 - Add each and every library and sketch to support & demonstrate every feature listed above.
 - Make the clock source, carrier frequency and other switches easily adjustable.
