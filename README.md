@@ -84,6 +84,7 @@ Used in a variety of implementations like signal triggers and timed events, thes
 - Allow the delay() function to work within ISR or at least leave a warning message.
 - Allow declarations like if(a == 1||2) instead of only if(a==1||a==2). [Requires compiler update]
 - Allow the serial monitor to work with attachInterrupt(), pinMode() and sleep modes reliably, or leave a warning behind.
+- Serial Monitor works between 300 - 74880 bps. Further than that, the data is unintelligible and needs caibration.
 - Make P5 pins switchable between GPIO mode and XT1 mode.
 - Make the Arduino program the chip on the first try. [Requires java upload script change]
 - Leave a warning behind when using RX and TX pins as GPIO pins and Serial Monitor at the same time.
