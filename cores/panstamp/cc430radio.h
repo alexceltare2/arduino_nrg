@@ -71,7 +71,13 @@ enum RFSTATE
 #define NUMBER_OF_FCHANNELS      10
 
 /**
- * CC430 configuration registers
+ * CC430 configuration registers (assuming 26Mhz oscilator)
+ * Carrier frequency = 868mHz
+ * Modulation = 2-GFSK
+ * Data rate = 38,400bps in normal mode, 4,800bps in slow mode
+ * Channel spacing = 200kHz
+ * Deviation = 20khz
+ * Receiver channel filter bandwidth = 100kHz
  */
 #define CCDEF_SYNC1      0xB5   // Synchronization word, high byte
 #define CCDEF_SYNC0      0x47   // Synchronization word, low byte
@@ -97,11 +103,11 @@ enum RFSTATE
 #define CCDEF_FREQ2_315  0x0C   // Frequency Control Word, High Byte
 #define CCDEF_FREQ1_315  0x1D   // Frequency Control Word, Middle Byte
 #define CCDEF_FREQ0_315  0x89   // Frequency Control Word, Low Byte
-#define CCDEF_MDMCFG4_4800    0xC7   // Modem configuration. Speed = 4800 bps
-#define CCDEF_MDMCFG4_38400    0xCA   // Modem configuration. Speed = 38 Kbps
+#define CCDEF_MDMCFG4_4800    0xC7   // Modem configuration. Speed = 4800 bps (Bandwidth+Data rate)
+#define CCDEF_MDMCFG4_38400    0xCA   // Modem configuration. Speed = 38 Kbps (Bandwidth+Data rate)
 #define CCDEF_MDMCFG3    0x83   // Modem configuration.(Data rate)
 #define CCDEF_MDMCFG2    0x93   // Modem configuration.(Modulation+Manchester)
-#define CCDEF_MDMCFG1    0x22   // Modem configuration.(Preamble)
+#define CCDEF_MDMCFG1    0x22   // Modem configuration.(Preamble+Channel spacing)
 #define CCDEF_MDMCFG0    0xF8   // Modem configuration.(Channel spacing)
 #define CCDEF_CHANNR     0x00   // Channel number.
 #define CCDEF_DEVIATN    0x35   // Modem deviation setting (when FSK modulation is enabled).
