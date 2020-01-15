@@ -74,6 +74,7 @@ enum RFSTATE
  * CC430 configuration registers (assuming 26Mhz oscilator)
  * Carrier frequency = 868mHz
  * Modulation = 2-GFSK
+ * Sync type: 30/32 sync word bits detected
  * Data rate = 38,400bps in normal mode, 4,800bps in slow mode
  * Channel spacing = 200kHz
  * Deviation = 20khz
@@ -106,7 +107,7 @@ enum RFSTATE
 #define CCDEF_MDMCFG4_4800    0xC7   // Modem configuration. Speed = 4800 bps (Bandwidth+Data rate)
 #define CCDEF_MDMCFG4_38400    0xCA   // Modem configuration. Speed = 38 Kbps (Bandwidth+Data rate)
 #define CCDEF_MDMCFG3    0x83   // Modem configuration.(Data rate)
-#define CCDEF_MDMCFG2    0x93   // Modem configuration.(Modulation+Manchester)
+#define CCDEF_MDMCFG2    0x93   // Modem configuration.(Modulation+Manchester+Sync)
 #define CCDEF_MDMCFG1    0x22   // Modem configuration.(Preamble+Channel spacing)
 #define CCDEF_MDMCFG0    0xF8   // Modem configuration.(Channel spacing)
 #define CCDEF_CHANNR     0x00   // Channel number.
