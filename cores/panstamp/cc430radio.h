@@ -74,7 +74,7 @@ enum RFSTATE
  * CC430 configuration registers (assuming 26Mhz oscilator)
  * Carrier frequency = 868mHz
  * Modulation = 2-GFSK
- * Sync type: 30/32 sync word bits detected
+ * Sync type = 30/32 sync word bits detected
  * Data rate = 38,400bps in normal mode, 4,800bps in slow mode
  * Channel spacing = 200kHz
  * Deviation = 20khz
