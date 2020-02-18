@@ -31,6 +31,7 @@ The default behaviour of the CC430 chipset is to operate with minimal external h
 * Hardware Real Time Clock & Calendar
 * Internal Temperature, Voltage & Signal Strength indicator
 * Password protection for program memory
+* Reset cause detector
 
 
 # Programming
