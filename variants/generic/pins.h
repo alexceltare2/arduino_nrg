@@ -86,6 +86,7 @@ static const uint8_t A4 = 12;
 static const uint8_t A5 = 13;        // Connected to NTC
 static const uint8_t A10 = 128 + 10; // special. This is the internal temp sensor
 static const uint8_t A11 = 128 + 11; // special. This is Vcc/2
+static const uint8_t A12 = 128 + 12; // special. This is VBAT
 
 // On-board LED
 #define ONBOARD_LED 23
