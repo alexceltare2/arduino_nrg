@@ -1,4 +1,4 @@
-# Universal CC430 for Arduino (unicc)
+# Universal TI CC430 for Arduino (uniti)
 Universal MSP430 + CC110X for Arduino
 
 This project aims to make panStamp a universal CC430 chip capable to be programmed using internal or external clocks, switchable carrier frequencies and many other tuneable features.
