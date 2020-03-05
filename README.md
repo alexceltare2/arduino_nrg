@@ -62,7 +62,7 @@ CC430 processors do not include EEPROM space. Instead, they provide a special re
 
 # Serial monitor
 To save programming resources, Arduino IDE doesn't load the HardwareSerial API by default, that is, you can't use "Serial.begin()" or "Serial.print()" unless you include "#include<HardwareSerial.h>" to your code.
-With regards to Serial Monitor, the DTR pin to be disconnected or grounded (with a switch) to start the Serial Monitor. A Java-BSL fix should be on the way. Also, avoid using the Serial monitor if the code contains panstamp.sleep() calls as this will shut off some serial functionalities.
+With regards to Serial Monitor, the DTR pin has to be disconnected or grounded (with a switch) to start the Serial Monitor. A Java-BSL fix should be on the way. Also, avoid using the Serial monitor if the code contains panstamp.sleep() calls as this will shut off some serial functionalities, or end it with Serial.end() before you call any sleep commands..
 
 # Radio Frequency
 To change frequencies from 868Mhz to 443Mhz for example, you would traditionally call "panstamp.init();" to your code. That is not the case anymore as the new API doesn't allow this behaviour and frequencies can be changed by editing "DEFAULT_CARRIER_FREQ" from "panstamp_nrg\hardware\msp430\1.1.0\cores\panstamp\panstamp.h". Other cool things can be changed from both the .h and .cpp file like FHSS hops and timer settings. Also, there is a new instruction you can call in the setup of your sketch and that is "panstamp.radio.setChannel(CFREQ_433);". Available frequencies are: 433, 868 (default), 915 & 918 Mhz.
