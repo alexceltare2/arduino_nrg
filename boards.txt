@@ -3,6 +3,75 @@
 menu.rfloader=Wireless bootloader
 
 ##############################################################
+base.name=Fireblitz Base Unit w/ cc430f5137
+base.build.core=panstamp
+base.upload.tool=ti-bsl
+base.upload.protocol=ti-bsl
+base.upload.maximum_size=32640
+base.build.mcu=cc430f5137
+base.build.f_cpu=12000000L
+base.build.variant=base_unit
+base.build.board=PANSTAMP_NRG
+
+base.ldscript=ldscript
+
+## With serial bootloader only
+##------------------------------------------------------------
+base.menu.rfloader.disabled=off
+base.menu.rfloader.disabled.ldscript=ldscript
+
+## With serial and wireless bootloader
+##------------------------------------------------------------
+base.menu.rfloader.enabled=on
+base.menu.rfloader.enabled.ldscript=ldscript_rf
+
+##############################################################
+pat.name=Fireblitz Patress w/ cc430f5137
+pat.build.core=panstamp
+pat.upload.tool=ti-bsl
+pat.upload.protocol=ti-bsl
+pat.upload.maximum_size=32640
+pat.build.mcu=cc430f5137
+pat.build.f_cpu=12000000L
+pat.build.variant=patress
+pat.build.board=PANSTAMP_NRG
+
+pat.ldscript=ldscript
+
+## With serial bootloader only
+##------------------------------------------------------------
+pat.menu.rfloader.disabled=off
+pat.menu.rfloader.disabled.ldscript=ldscript
+
+## With serial and wireless bootloader
+##------------------------------------------------------------
+pat.menu.rfloader.enabled=on
+pat.menu.rfloader.enabled.ldscript=ldscript_rf
+
+##############################################################
+gen.name=Generic w/ cc430f5137
+gen.build.core=panstamp
+gen.upload.tool=ti-bsl
+gen.upload.protocol=ti-bsl
+gen.upload.maximum_size=32640
+gen.build.mcu=cc430f5137
+gen.build.f_cpu=12000000L
+gen.build.variant=generic
+gen.build.board=PANSTAMP_NRG
+
+gen.ldscript=ldscript
+
+## With serial bootloader only
+##------------------------------------------------------------
+gen.menu.rfloader.disabled=off
+gen.menu.rfloader.disabled.ldscript=ldscript
+
+## With serial and wireless bootloader
+##------------------------------------------------------------
+gen.menu.rfloader.enabled=on
+gen.menu.rfloader.enabled.ldscript=ldscript_rf
+
+##############################################################
 nrg3.name=panStamp NRG 3 w/ cc430f5137
 nrg3.build.core=panstamp
 nrg3.upload.tool=ti-bsl
