@@ -60,6 +60,20 @@ void TIMER0A5::start(unsigned int millis)
 }
 
 /**
+ * start2
+ *
+ * Start T0A5 timer using ACLK ticks
+ *
+ * @param ticks ACLK clock cycles to be timed. Up to 2000 ms
+ */
+void TIMER0A5::start2(unsigned int ticks)
+{
+  TA0CCTL0 = CCIE;                          // CCR0 interrupt enabled
+  TA0CCR0 = ticks;                // Max count
+  TA0CTL = TASSEL_1 + MC_1 + TACLR;         // ACLK, upmode, clear TAR
+}
+
+/**
  * stop/halt
  *
  * Stop T0A5 timer
