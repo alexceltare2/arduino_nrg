@@ -53,6 +53,15 @@ class TIMER0A5
      * @param millis Milliseconds to be timed. Up to 2000 ms
      */
     void start(unsigned int millis);
+	
+    /**
+     * start2
+     *
+     * Start T0A5 timer using ACLK ticks
+     *
+     * @param ticks ACLK clock cycles to be timed. Up to 2000 ms
+     */
+    void start2(unsigned int ticks);
 
     /**
      * halt
